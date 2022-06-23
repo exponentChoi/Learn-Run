@@ -9,6 +9,7 @@ import UIKit
 
 enum Screen: CaseIterable {
     case tooltip
+    case newHot
     case multipleTopTabBar
     case multipleTopTabBar2
     case textBox
@@ -27,11 +28,14 @@ enum Screen: CaseIterable {
     case alert
     case stickyAlert
     case halfModal
+    case appStoreClone
     
     func getTitle() -> String {
         switch self {
         case .tooltip:
             return "Tooltip"
+        case .newHot:
+            return "New&Hot"
         case .multipleTopTabBar:
             return "MultipleTopTabBar"
         case .multipleTopTabBar2:
@@ -68,6 +72,8 @@ enum Screen: CaseIterable {
             return "StickyAlert"
         case .halfModal:
             return "HalfModal"
+        case .appStoreClone:
+            return "AppStoreClone"
         }
     }
   
@@ -75,6 +81,8 @@ enum Screen: CaseIterable {
         switch self {
         case .tooltip:
             return TooltipTestViewController()
+        case .newHot:
+            return NewHotViewController()
         case .multipleTopTabBar:
             return MultipleTopTabBarViewController()
         case .multipleTopTabBar2:
@@ -111,6 +119,8 @@ enum Screen: CaseIterable {
             return StickyAlertTestViewController()
         case .halfModal:
             return HalfModalTestViewController()
+        case .appStoreClone:
+            return TodayViewController()
         }
     }
 }
